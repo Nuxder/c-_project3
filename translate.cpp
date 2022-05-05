@@ -1,3 +1,11 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
 #include <iostream>
 #include "string"
 
@@ -14,6 +22,47 @@ void decode(string Text)
     string EndText;
     Knoten Ende;
     Knoten* Null = &Ende;
+    Knoten funf;
+    funf.Buchstabe="5";
+    funf.left=Null;
+    funf.right=Null;
+    Knoten vier;
+    vier.Buchstabe="4";
+    vier.left=Null;
+    vier.right=Null;
+    Knoten drei;
+    drei.Buchstabe="3";
+    drei.left=Null;
+    drei.right=Null;
+    Knoten zwei;
+    zwei.Buchstabe="2";
+    zwei.left=Null;
+    zwei.right=Null;
+    Knoten plus;
+    plus.Buchstabe="plus";
+    plus.left=Null;
+    plus.right=&punkt;    
+    Knoten eins;
+    eins.Buchstabe="1";
+    eins.left=&apostroph;
+    eins.right=Null;
+    Knoten sechs;
+    sechs.Buchstabe="6";
+    sechs.left=Null;
+    sechs.right=strich;
+    Knoten gleich;
+    gleich.Buchstabe="=";
+    gleich.left=Null;
+    gleich.right=Null;
+    Knoten zwei;
+    zwei.Buchstabe="2";
+    zwei.left=Null;
+    zwei.right=Null;
+    Knoten zwei;
+    zwei.Buchstabe="2";
+    zwei.left=Null;
+    zwei.right=Null;
+    
     Knoten H;
     H.Buchstabe="H";
     H.Ebene=3;
@@ -149,6 +198,8 @@ void decode(string Text)
     T.Ebene=0;
     T.left=&N;
     T.right=&M;
+    
+    
     Knoten Beginn;
     Beginn.left=&E;
     Beginn.right=&T;
@@ -191,7 +242,7 @@ void decode(string Text)
     cout <<EndText;
     
 }
-int main() 
+int main()
 {   
     string test = "-- .- .-..  ... -.-. .... .- ..- . -.  --- -...  -.. .- ...  ..-. ..- -. -.- - .. --- -. .. . .-. -";
     decode(test);
