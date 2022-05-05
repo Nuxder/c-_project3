@@ -1,6 +1,10 @@
 
 #include <iostream>
 #include "string"
+#include <map>
+using std::cout; using std::cin;
+using std::endl; using std::string;
+using std::map; using std::copy;
 
 using namespace std;
 struct Knoten{
@@ -190,10 +194,106 @@ void decode(string Text)
     cout <<Anfang.Buchstabe;
     
 }
+
+template<typename Map>
+void PrintMap(Map& m)
+{
+    cout << "[ ";
+    for (auto &item : m) {
+        cout << item.first << ":" << item.second << " ";
+    }
+    cout << "]\n";
+}
+
+void encode2(string Text) {
+    map<char, string> map1 = {{'A', ".-",},
+                              {'B', "-...",},
+                              {'C', "-.-.",},
+                              {'D', "-..",},
+                              {'E', ".",},
+                              {'F', "..-.",},
+                              {'G', "--.",},
+                              {'H', "....",},
+                              {'I', "..",},
+                              {'J', ".---",},
+                              {'K', "-.-",},
+                              {'L', ".-..",},
+                              {'M', "--",},
+                              {'N', "-.",},
+                              {'O', "---",},
+                              {'P', ".--.",},
+                              {'Q', "--.-",},
+                              {'R', ".-.",},
+                              {'S', "...",},
+                              {'T', "-",},
+                              {'U', "..-",},
+                              {'V', "...-",},
+                              {'W', ".--",},
+                              {'X', "-..-",},
+                              {'Y', "-.--",},
+                              {'Z', "--..",},
+                              {'a', ".-",},
+                              {'b', "-...",},
+                              {'c', "-.-.",},
+                              {'d', "-..",},
+                              {'e', ".",},
+                              {'f', "..-.",},
+                              {'g', "--.",},
+                              {'h', "....",},
+                              {'i', "..",},
+                              {'j', ".---",},
+                              {'k', "-.-",},
+                              {'l', ".-..",},
+                              {'m', "--",},
+                              {'n', "-.",},
+                              {'o', "---",},
+                              {'p', ".--.",},
+                              {'q', "--.-",},
+                              {'r', ".-.",},
+                              {'s', "...",},
+                              {'t', "-",},
+                              {'u', "..-",},
+                              {'v', "...-",},
+                              {'w', ".--",},
+                              {'x', "-..-",},
+                              {'y', "-.--",},
+                              {'z', "--..",},
+                              {'.', ".-.-.-",},
+                              {',', "--..--",},
+                              {'?', "..--..",},
+                              {'/', "-..-.",},
+                              {'@', "...-.-",},
+                              {'1', ".----",},
+                              {'2', "..---",},
+                              {'3', "...--",},
+                              {'4', "....-",},
+                              {'5', ".....",},
+                              {'6', "-....",},
+                              {'7', "--...",},
+                              {'8', "---..",},
+                              {'9', "----.",},
+                              {'0', "-----",},};
+
+    char chatText[Text.length()];
+    string Endprodukt;
+    for(int i=0; i<Text.length();i++)
+    {
+        chatText[i]=Text[i];
+    }
+    for(int i=0; i<Text.length(); i++){
+        Endprodukt = Endprodukt + map1[chatText[i]] + " ";
+
+    }
+    cout << "\n";
+    cout << Endprodukt;
+}
+
 int main()
 {   
     string test = "-- .- .-..  ... -.-. .... .- ..- . -.  --- -...  -.. .- ...  ..-. ..- -. -.- - .. --- -. .. . .-. -";
     decode(test);
+    string testALI = "Hallo";
+    encode2(testALI);
     return 0;
 }
 
