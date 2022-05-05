@@ -10,7 +10,7 @@ int write_data(string text){
     FILE *o_file = fopen(filename.c_str(), "w+");
     if (o_file){
         fwrite(text.c_str(), 1, text.size(), o_file);
-        cout << "Done Writing!" << endl;
+        cout << "Datei wurde erstellt!" << endl;
     }
 
 }
