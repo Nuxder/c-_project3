@@ -9,7 +9,7 @@ struct Knoten{
     Knoten* right;
 };
 
-void decode(string Text)
+string decode(string Text)
 {
     string EndText;
     Knoten Ende;
@@ -191,9 +191,13 @@ void decode(string Text)
     cout <<EndText;
     
 }
+
 int main() 
+
 {   
     string test = "-- .- .-..  ... -.-. .... .- ..- . -.  --- -...  -.. .- ...  ..-. ..- -. -.- - .. --- -. .. . .-. -";
     decode(test);
     return 0;
+
 }
+
