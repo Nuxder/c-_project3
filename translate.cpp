@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include "string"
 
@@ -12,6 +11,7 @@ struct Knoten{
 
 void decode(string Text)
 {
+    string EndText;
     Knoten Ende;
     Knoten* Null = &Ende;
     Knoten H;
@@ -174,26 +174,26 @@ void decode(string Text)
             {
                 if(chatText[i]==' ' && chatText[i+1]==' ')
                 {
-                cout<< Anfang.Buchstabe;
-                cout<<" ";
+                EndText+= Anfang.Buchstabe;
+                EndText+=" ";
                 Anfang=Beginn;
                 }
                 else
                 {
-                    cout<<Anfang.Buchstabe;
+                    EndText+=Anfang.Buchstabe;
                     Anfang=Beginn;
                 }
             }
         }
         
     }
-    cout <<Anfang.Buchstabe;
+    EndText+=Anfang.Buchstabe;
+    cout <<EndText;
     
 }
-int main()
+int main() 
 {   
     string test = "-- .- .-..  ... -.-. .... .- ..- . -.  --- -...  -.. .- ...  ..-. ..- -. -.- - .. --- -. .. . .-. -";
     decode(test);
     return 0;
 }
-
