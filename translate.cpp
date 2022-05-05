@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include "string"
 #include <map>
@@ -14,8 +13,9 @@ struct Knoten{
     Knoten* right;
 };
 
-void decode(string Text)
+string decode(string Text)
 {
+    string EndText;
     Knoten Ende;
     Knoten* Null = &Ende;
     Knoten H;
@@ -178,22 +178,24 @@ void decode(string Text)
             {
                 if(chatText[i]==' ' && chatText[i+1]==' ')
                 {
-                cout<< Anfang.Buchstabe;
-                cout<<" ";
+                EndText+= Anfang.Buchstabe;
+                EndText+=" ";
                 Anfang=Beginn;
                 }
                 else
                 {
-                    cout<<Anfang.Buchstabe;
+                    EndText+=Anfang.Buchstabe;
                     Anfang=Beginn;
                 }
             }
         }
         
     }
-    cout <<Anfang.Buchstabe;
+    EndText+=Anfang.Buchstabe;
+    cout <<EndText;
     
 }
+
 
 template<typename Map>
 void PrintMap(Map& m)
@@ -295,5 +297,6 @@ int main()
     string testALI = "Hallo";
     encode2(testALI);
     return 0;
+
 }
 
