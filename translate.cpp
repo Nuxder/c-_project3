@@ -1,11 +1,3 @@
-/******************************************************************************
-
-                              Online C++ Compiler.
-               Code, Compile, Run and Debug C++ program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
-
 #include <iostream>
 #include "string"
 
@@ -19,6 +11,7 @@ struct Knoten{
 
 string decode(string Text)
 {
+    string EndText;
     Knoten Ende;
     Knoten* Null = &Ende;
     Knoten H;
@@ -181,27 +174,30 @@ string decode(string Text)
             {
                 if(chatText[i]==' ' && chatText[i+1]==' ')
                 {
-                cout<< Anfang.Buchstabe;
-                cout<<" ";
+                EndText+= Anfang.Buchstabe;
+                EndText+=" ";
                 Anfang=Beginn;
                 }
                 else
                 {
-                    cout<<Anfang.Buchstabe;
+                    EndText+=Anfang.Buchstabe;
                     Anfang=Beginn;
                 }
             }
         }
         
     }
-    cout <<Anfang.Buchstabe;
+    EndText+=Anfang.Buchstabe;
+    cout <<EndText;
     
 }
 
-/*int main()
+int main() 
+
 {   
     string test = "-- .- .-..  ... -.-. .... .- ..- . -.  --- -...  -.. .- ...  ..-. ..- -. -.- - .. --- -. .. . .-. -";
     decode(test);
     return 0;
-}*/
+
+}
 
