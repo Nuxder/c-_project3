@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
             case 'o': //output
                 opt_o = optarg;
             case 'e': //encode
-                //write_data(encode(read_data(optarg)));
+                
             case 'd': //decode
                 write_data(decode(read_data(optarg)));
             case 't': //test
