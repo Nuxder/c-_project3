@@ -17,7 +17,7 @@ struct Knoten{
     Knoten* right;
 };
 
-void decode(string Text)
+string decode(string Text)
 {
     Knoten Ende;
     Knoten* Null = &Ende;
@@ -197,10 +197,11 @@ void decode(string Text)
     cout <<Anfang.Buchstabe;
     
 }
-int main()
+
+/*int main()
 {   
     string test = "-- .- .-..  ... -.-. .... .- ..- . -.  --- -...  -.. .- ...  ..-. ..- -. -.- - .. --- -. .. . .-. -";
     decode(test);
     return 0;
-}
+}*/
 
