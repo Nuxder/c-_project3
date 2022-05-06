@@ -286,8 +286,7 @@ string encode(string Text) {
         Endprodukt = Endprodukt + map1[chatText[i]] + " ";
 
     }
-    cout << "\n";
-    cout << Endprodukt;
+    return Endprodukt;
 }
 
 /*int main()
