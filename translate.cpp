@@ -207,7 +207,7 @@ void PrintMap(Map& m)
     cout << "]\n";
 }
 
-void encode2(string Text) {
+string encode(string Text) {
     map<char, string> map1 = {{'A', ".-",},
                               {'B', "-...",},
                               {'C', "-.-.",},
@@ -290,7 +290,7 @@ void encode2(string Text) {
     cout << Endprodukt;
 }
 
-int main()
+/*int main()
 {   
     string test = "-- .- .-..  ... -.-. .... .- ..- . -.  --- -...  -.. .- ...  ..-. ..- -. -.- - .. --- -. .. . .-. -";
     decode(test);
@@ -298,5 +298,5 @@ int main()
     encode2(testALI);
     return 0;
 
-}
+}*/
 
