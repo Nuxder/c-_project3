@@ -196,17 +196,6 @@ string decode(string Text)
     
 }
 
-
-template<typename Map>
-void PrintMap(Map& m)
-{
-    cout << "[ ";
-    for (auto &item : m) {
-        cout << item.first << ":" << item.second << " ";
-    }
-    cout << "]\n";
-}
-
 string encode(string Text) {
     map<char, string> map1 = {{'A', ".-",},
                               {'B', "-...",},
