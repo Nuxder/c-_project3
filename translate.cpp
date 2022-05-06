@@ -18,6 +18,134 @@ string decode(string Text)
     string EndText;
     Knoten Ende;
     Knoten* Null = &Ende;
+
+    Knoten fragezeichen;
+    fragezeichen.Buchstabe="?";
+    fragezeichen.left=Null;
+    fragezeichen.right=Null;
+    Knoten unterstrich;
+    unterstrich.Buchstabe="_";
+    unterstrich.left=Null;
+    unterstrich.right=Null;
+    Knoten anfuhrung;
+    anfuhrung.Buchstabe="\"";
+    anfuhrung.left=Null;
+    anfuhrung.right=Null;
+    Knoten punkt;
+    punkt.Buchstabe=".";
+    punkt.left=Null;
+    punkt.right=Null;
+    Knoten att;
+    att.Buchstabe="@";
+    att.left=Null;
+    att.right=Null;
+    Knoten apostroph;
+    apostroph.Buchstabe="\'";
+    apostroph.left=Null;
+    apostroph.right=Null;
+    Knoten strich;
+    strich.Buchstabe="-";
+    strich.left=Null;
+    strich.right=Null;
+    Knoten doppelpunkt;
+    doppelpunkt.Buchstabe=":";
+    doppelpunkt.left=Null;
+    doppelpunkt.right=Null;
+    Knoten ausrufezeichen;
+    ausrufezeichen.Buchstabe="!";
+    ausrufezeichen.left=Null;
+    ausrufezeichen.right=Null;
+    Knoten komma;
+    komma.Buchstabe=",";
+    komma.left=Null;
+    komma.right=Null;
+    Knoten strichpunkt;
+    strichpunkt.Buchstabe=";";
+    strichpunkt.left=Null;
+    strichpunkt.right=Null;
+
+    Knoten platz1;
+    platz1.left=&fragezeichen;
+    platz1.right=&unterstrich;
+    Knoten platz2;
+    platz2.left=&anfuhrung;
+    platz2.right=Null;
+    Knoten platz3;
+    platz3.left=&att;
+    platz3.right=Null;
+    Knoten platz4;
+    platz4.left=&strichpunkt;
+    platz4.right=&ausrufezeichen;
+    Knoten platz5;
+    platz5.left=Null;
+    platz5.right=&komma;
+
+    Knoten funf;
+    funf.Buchstabe="5";
+    funf.left=Null;
+    funf.right=Null;
+    Knoten vier;
+    vier.Buchstabe="4";
+    vier.left=Null;
+    vier.right=Null;
+    Knoten drei;
+    drei.Buchstabe="3";
+    drei.left=Null;
+    drei.right=Null;
+    Knoten zwei;
+    zwei.Buchstabe="2";
+    zwei.left=Null;
+    zwei.right=Null;
+    Knoten plus;
+    plus.Buchstabe="plus";
+    plus.left=Null;
+    plus.right=&punkt;
+    Knoten eins;
+    eins.Buchstabe="1";
+    eins.left=&apostroph;
+    eins.right=Null;
+    Knoten sechs;
+    sechs.Buchstabe="6";
+    sechs.left=Null;
+    sechs.right=&strich;
+    Knoten gleich;
+    gleich.Buchstabe="=";
+    gleich.left=Null;
+    gleich.right=Null;
+    Knoten backslash;
+    backslash.Buchstabe="/";
+    backslash.left=Null;
+    backslash.right=Null;
+    Knoten sieben;
+    sieben.Buchstabe="7";
+    sieben.left=Null;
+    sieben.right=Null;
+    Knoten acht;
+    acht.Buchstabe="8";
+    acht.left=&doppelpunkt;
+    acht.right=Null;
+    Knoten neun;
+    neun.Buchstabe="9";
+    neun.left=Null;
+    neun.right=Null;
+    Knoten null;
+    null.Buchstabe="0";
+    null.left=Null;
+    null.right=Null;
+
+    Knoten platz6;
+    platz1.left=&platz1;
+    platz1.right=&zwei;
+    Knoten platz7;
+    platz2.left=&plus;
+    platz2.right=Null;
+    Knoten platz8;
+    platz3.left=&acht;
+    platz3.right=Null;
+    Knoten platz9;
+    platz4.left=&neun;
+    platz4.right=&null;
+
     Knoten H;
     H.Buchstabe="H";
     H.Ebene=3;
@@ -27,7 +155,7 @@ string decode(string Text)
     V.Buchstabe="V";
     V.Ebene=3;
     V.left=Null;
-    V.right=Null;    
+    V.right=Null;
     Knoten F;
     F.Buchstabe="F";
     F.Ebene=3;
@@ -37,7 +165,7 @@ string decode(string Text)
     L.Buchstabe="L";
     L.Ebene=3;
     L.left=Null;
-    L.right=Null; 
+    L.right=&platz2;
     Knoten P;
     P.Buchstabe="P";
     P.Ebene=3;
@@ -78,8 +206,8 @@ string decode(string Text)
     Q.Ebene=3;
     Q.left=Null;
     Q.right=Null;
-    
-    
+
+
     Knoten S;
     S.Buchstabe="S";
     S.Ebene=2;
@@ -89,12 +217,12 @@ string decode(string Text)
     U.Buchstabe="U";
     U.Ebene=2;
     U.left=&F;
-    U.right=Null;
+    U.right=&platz6;
     Knoten R;
     R.Buchstabe="R";
     R.Ebene=2;
     R.left=&L;
-    R.right=Null;
+    R.right=&platz7;
     Knoten W;
     W.Buchstabe="W";
     W.Ebene=2;
@@ -118,10 +246,10 @@ string decode(string Text)
     Knoten O;
     O.Buchstabe="O";
     O.Ebene=2;
-    O.left=Null;
-    O.right=Null;
-    
-    
+    O.left=&platz8;
+    O.right=&platz9;
+
+
     Knoten I;
     I.Buchstabe="I";
     I.Ebene=1;
@@ -142,7 +270,7 @@ string decode(string Text)
     M.Ebene=1;
     M.left=&G;
     M.right=&O;
-    
+
     Knoten E;
     E.Buchstabe="E";
     E.Ebene=0;
@@ -153,6 +281,8 @@ string decode(string Text)
     T.Ebene=0;
     T.left=&N;
     T.right=&M;
+
+
     Knoten Beginn;
     Beginn.left=&E;
     Beginn.right=&T;
@@ -189,11 +319,11 @@ string decode(string Text)
                 }
             }
         }
-        
+
     }
     EndText+=Anfang.Buchstabe;
-    cout <<EndText;
-    
+    return EndText;
+
 }
 
 
