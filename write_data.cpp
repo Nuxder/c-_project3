@@ -1,10 +1,9 @@
 #include <iostream>
 #include <fstream>
 
-using std::cout; using std::ofstream;
-using std::endl; using std::string;
+using namespace std;
 
-int write_data(string text){
+int write_data(const string& text){
     string filename("Ausgabe.txt");
 
     FILE *o_file = fopen(filename.c_str(), "w+");
