@@ -4,11 +4,13 @@
 using namespace std;
 
 int write_data(const string& text, string name){
-    string filename(name);
+    fstream output_fstream;
 
-    FILE *o_file = fopen(filename.c_str(), "w+");
-    if (o_file){
-        fwrite(text.c_str(), 1, text.size(), o_file);
+    output_fstream.open(name, std::ios_base::out);
+    if (!output_fstream.is_open()) {
+        cerr << "Failed to open " << name << '\n';
+    } else {
+        output_fstream << text << endl;
     }
 
 }
